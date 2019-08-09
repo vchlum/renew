@@ -204,7 +204,7 @@ output_creds(krb5_context context, krb5_creds *target_creds)
 
 	printf("Type: Kerberos\n");
 	/* there might be multiple credentials exported, which we silently ignore */
-	printf("Valid until: %ld\n", creds[0]->times.endtime);
+	printf("Valid until: %ld\n", (long int)creds[0]->times.endtime);
 	printf("%s\n", encoded);
 
 	ret = 0;
